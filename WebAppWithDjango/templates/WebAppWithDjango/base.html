@@ -9,7 +9,10 @@
     {% load static %}
 
     <!-- Bootstrap CSS -->
-    <link href="{% static 'WebAppWithDjango/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'WebAppWithDjango/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
 
     <!-- Fonts -->
     <link
@@ -22,7 +25,10 @@
     />
 
     <!-- Styles -->
-    <link href="{% static 'WebAppWithDjango/css/management.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'WebAppWithDjango/css/management.css' %}"
+      rel="stylesheet"
+    />
 
     <title>Home</title>
   </head>
@@ -53,32 +59,48 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}"
+            <li
+              class="nav-item px-lg-4 {% if request.path == '/' %} active {% endif %}"
+            >
+              <a
+                class="nav-link text-uppercase text-expanded"
+                href="{% url 'home' %}"
                 >Home</a
               >
             </li>
-            <li class="nav-item px-lg-4">
+            <li
+              class="nav-item px-lg-4 {% if request.path == 'services' %} active {% endif %}"
+            >
               <a
                 class="nav-link text-uppercase text-expanded"
                 href="{% url 'services' %}"
                 >Services</a
               >
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'shop' %}"
+            <li
+              class="nav-item px-lg-4 {% if request.path == 'shop' %} active {% endif %}"
+            >
+              <a
+                class="nav-link text-uppercase text-expanded"
+                href="{% url 'shop' %}"
                 >Shop</a
               >
             </li>
-            <li class="nav-item px-lg-4">
+            <li
+              class="nav-item px-lg-4 {% if request.path == 'contact' %} active {% endif %}"
+            >
               <a
                 class="nav-link text-uppercase text-expanded"
                 href="{% url 'contact' %}"
                 >Contact</a
               >
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}"
+            <li
+              class="nav-item px-lg-4 {% if request.path == 'blog' %} active {% endif %}"
+            >
+              <a
+                class="nav-link text-uppercase text-expanded"
+                href="{% url 'blog' %}"
                 >Blog</a
               >
             </li>
@@ -88,8 +110,7 @@
     </nav>
 
     <!-- Page Content -->
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
 
     <!-- Footer -->
     <footer class="footer text-faded text-center py-5">
