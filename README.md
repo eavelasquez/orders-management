@@ -19,6 +19,10 @@ To run the development server, run the following command:
 
     $ python manage.py runserver
 
+To apply general migrations, run the following command:
+
+    $ python manage.py migrations
+
 To migrate the database, run the following command:
 
     $ python manage.py makemigrations
@@ -26,3 +30,10 @@ To migrate the database, run the following command:
 You can also run the development server in debug mode:
 
     $ python manage.py runserver --debug
+
+### Django Admin
+
+To access the Django admin, the username and password are:
+
+    username: admin
+    password: adminpwd
