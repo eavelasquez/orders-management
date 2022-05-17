@@ -1,170 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends "WebAppWithDjango/base.html" %}
 
-    {% load static %}
+{% load static %}
 
-    <!-- Bootstrap CSS -->
-    <link href="{% static 'WebAppWithDjango/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i"
-      rel="stylesheet"
-    />
-
-    <!-- Styles -->
-    <link href="{% static 'WebAppWithDjango/css/management.css' %}" rel="stylesheet" />
-
-    <title>Home</title>
-  </head>
-
-  <body>
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-lower">Orders management</span>
-    </h1>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a
-          class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none"
-          href="home.html"
-          >Orders management</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="home.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="services.html"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="shop.html"
-                >Shop</a
-              >
-            </li>
-            <li class="nav-item px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="contact.html"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="blog.html"
-                >Blog</a
-              >
-            </li>
-          </ul>
+{% block content %}
+  <!-- Heading -->
+  <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img
+          class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+          src="{% static 'WebAppWithDjango/img/principal.jpg' %}"
+          alt=""
+        />
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Punctuality</span>
+            <span class="section-heading-lower">The best stock</span>
+          </h2>
+          <p class="mb-3">
+            At the door of your house in less than 48 hours with normal delivery.
+            In less than 24 hours with express delivery.
+          </p>
         </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- Heading -->
-    <section class="page-section clearfix">
-      <div class="container">
-        <div class="intro">
-          <img
-            class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-            src="{% static 'WebAppWithDjango/img/principal.jpg' %}"
-            alt=""
-          />
-          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+  <!-- About -->
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Punctuality</span>
-              <span class="section-heading-lower">The best stock</span>
+              <span class="section-heading-upper">Full commitment</span>
+              <span class="section-heading-lower">Guaranteed</span>
             </h2>
-            <p class="mb-3">
-              At the door of your house in less than 48 hours with normal
-              delivery. In less than 24 hours with express delivery.
+            <p class="mb-0">
+              With more than 75 years of experience behind us, at Order Management
+              we have the necessary knowledge and tools to bring any object to
+              your door with punctuality and professionalism.
             </p>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- About -->
-    <section class="page-section cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Full commitment</span>
-                <span class="section-heading-lower">Guaranteed</span>
-              </h2>
-              <p class="mb-0">
-                With more than 75 years of experience behind us, at Order
-                Management we have the necessary knowledge and tools to bring
-                any object to your door with punctuality and professionalism.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0">
-          <a href="#" class="link">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-          <a href="#" class="link">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-          <a href="#" class="link">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </p>
-        <p class="m-0 mbt">
-          <a href="sample.html" class="link">Privacy Policy</a> ·
-          <a href="sample.html" class="link">Legal notice</a> ·
-          <a href="sample.html" class="link">Cookies</a>
-        </p>
-        <p class="m-0 mbt1">&copy; Orders management 2022</p>
-      </div>
-    </footer>
-
-    <!-- jQuery andsection Bootstrap JS -->
-    <script src="{% static 'WebAppWithDjango/vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'WebAppWithDjango/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  </body>
-</html>
+    </div>
+  </section>
+{% endblock %}
