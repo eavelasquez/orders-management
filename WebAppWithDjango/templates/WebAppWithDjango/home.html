@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    {% load static %}
+
     <!-- Bootstrap CSS -->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{% static 'WebAppWithDjango/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
 
     <!-- Fonts -->
     <link
@@ -20,7 +22,7 @@
     />
 
     <!-- Styles -->
-    <link href="/css/management.css" rel="stylesheet" />
+    <link href="{% static 'WebAppWithDjango/css/management.css' %}" rel="stylesheet" />
 
     <title>Home</title>
   </head>
@@ -91,7 +93,7 @@
         <div class="intro">
           <img
             class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-            src="/img/principal.jpg"
+            src="{% static 'WebAppWithDjango/img/principal.jpg' %}"
             alt=""
           />
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
@@ -162,7 +164,7 @@
     </footer>
 
     <!-- jQuery andsection Bootstrap JS -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'WebAppWithDjango/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'WebAppWithDjango/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   </body>
 </html>
