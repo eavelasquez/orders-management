@@ -19,6 +19,9 @@ To run the development server, run the following command:
 
     $ python manage.py runserver
 
+To migrate the database, run the following command:
+
+    $ python manage.py makemigrations
 
 You can also run the development server in debug mode:
 
