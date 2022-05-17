@@ -2,18 +2,24 @@
 
 ## About this project
 
-This is a simple web site with Django.
+This is a simple web site with Django for the purpose of learning Django. The site is a simple order management system.
+
+![WebApp](./assets/webapp.png)
+
+## Setup
+
+Be sure to be running the latest version of Django and pip.
+
+    $ pip install django
+    $ cd website-with-django
 
 ## Development
 
 To run the development server, run the following command:
 
-```bash
-  python manage.py runserver
-```
+    $ python manage.py runserver
+
 
 You can also run the development server in debug mode:
 
-```bash
-  python manage.py runserver --debug
-```
+    $ python manage.py runserver --debug
