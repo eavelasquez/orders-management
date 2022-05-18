@@ -3,16 +3,24 @@
 {% load static %}
 
 {% block content %}
-  <h1>Services</h1>
-
   {% for service in services %}
-    <div>
-      <h2>{{ service.name }}</h2>
-      <p>{{ service.description }}</p>
-      <p>
-        <img src="{{service.image.url}}" alt="{{ service.name }}" />
-      </p>
-    </div>
+    <section class="page-section clearfix">
+      <div class="container">
+        <div class="intro">
+          <img
+            class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+            src="{{ service.image.url }}"
+            alt="{{ service.name }}"
+            style="width: 50%;"
+          />
+          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-lower">{{ service.name }}</span>
+              <span class="section-heading-upper">{{ service.description }}</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
   {% endfor %}
 {% endblock %}
-
