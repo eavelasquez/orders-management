@@ -9,10 +9,6 @@ def home(request):
     return render(request, 'WebAppWithDjango/home.html')
 
 
-def services(request):
-    services = Service.objects.all()
-    return render(request, 'WebAppWithDjango/services.html', {'services': services})
-
 def shop(request):
     return render(request, 'WebAppWithDjango/shop.html')
 
