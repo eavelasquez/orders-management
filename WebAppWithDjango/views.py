@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from ServicesApp.models import Service
+
 # Create your views here.
 
 
@@ -8,8 +10,8 @@ def home(request):
 
 
 def services(request):
-    return render(request, 'WebAppWithDjango/services.html')
-
+    services = Service.objects.all()
+    return render(request, 'WebAppWithDjango/services.html', {'services': services})
 
 def shop(request):
     return render(request, 'WebAppWithDjango/shop.html')
